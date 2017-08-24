@@ -1,4 +1,15 @@
-@import 'setup';
+@import 'partials/setup';
+@import 'partials/header';
+
+// font-family: 'Raleway', sans-serif;
+// font-family: 'Parisienne', cursive;
+
+body {
+	margin: 0 auto;
+	max-width: 100%;
+	font-family: 'Raleway', sans-serif;
+
+}
 
 img {
 	width: 600px;
