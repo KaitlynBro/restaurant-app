@@ -147,7 +147,8 @@ h1 {
   text-align: center;
   margin-bottom: 20px;
   font-size: 50px;
-  font-family: 'Parisienne', cursive; }
+  font-family: 'Parisienne', cursive;
+  letter-spacing: 1px; }
 
 #logoAndButton {
   text-align: center;
@@ -177,7 +178,16 @@ h1 {
 
 .mias {
   font-size: 40px;
-  font-family: 'Parisienne', cursive; }
+  font-family: 'Parisienne', cursive;
+  letter-spacing: 1px; }
+
+.mias:after {
+  display: block;
+  content: '';
+  position: absolute;
+  background-color: black;
+  width: 45px;
+  height: 1px; }
 
 #navItems {
   display: -webkit-box;
@@ -190,18 +200,58 @@ h1 {
     -webkit-transition: background-color 0.9s ease;
     transition: background-color 0.9s ease; }
 
-#navItems li:hover {
-  background-color: rgba(133, 161, 31, 0.6);
-  padding: 20px; }
-
 #navItems button {
   background-color: transparent;
   border: none; }
+
+#menuSection {
+  background-color: rgba(133, 161, 31, 0.6);
+  padding-bottom: 50px;
+  margin: 0 auto;
+  width: 90%; }
+
+#menuContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly; }
+  #menuContent p {
+    font-size: 16px;
+    font-style: italic; }
 
 body {
   margin: 0 auto;
   max-width: 100%;
   font-family: 'Raleway', sans-serif; }
+
+h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Parisienne', cursive;
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-top: 150px;
+  padding-top: 40px; }
+
+h2:after {
+  display: block;
+  content: '';
+  position: absolute;
+  background-color: black;
+  width: 45px;
+  height: 1px; }
+
+h4 {
+  text-transform: capitalize;
+  font-size: 18px;
+  margin-bottom: 0px;
+  font-style: italic; }
 
 img {
   width: 600px;
