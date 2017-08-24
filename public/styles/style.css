@@ -216,10 +216,32 @@ h1 {
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
-          justify-content: space-evenly; }
+          justify-content: space-evenly;
+  padding: 20px; }
   #menuContent p {
     font-size: 16px;
     font-style: italic; }
+
+#galleryContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto; }
+
+.galleryImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 body {
   margin: 0 auto;
@@ -252,7 +274,3 @@ h4 {
   font-size: 18px;
   margin-bottom: 0px;
   font-style: italic; }
-
-img {
-  width: 600px;
-  height: 600px; }
