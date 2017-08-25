@@ -148,7 +148,9 @@ h1 {
   margin-bottom: 20px;
   font-size: 50px;
   font-family: 'Parisienne', cursive;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  width: 100%;
+  font-weight: normal; }
 
 #logoAndButton {
   text-align: center;
@@ -160,7 +162,8 @@ h1 {
 #seeMoreButton {
   background-color: transparent;
   padding: 10px;
-  border: 3px solid rgba(133, 161, 31, 0.6); }
+  border: 3px solid rgba(133, 161, 31, 0.6);
+  width: 100%; }
 
 #mainNav {
   display: -webkit-box;
@@ -204,13 +207,13 @@ h1 {
   background-color: transparent;
   border: none; }
 
-#menuSection {
+.colorBackground {
   background-color: rgba(133, 161, 31, 0.6);
   padding-bottom: 50px;
   margin: 0 auto;
   width: 90%; }
 
-#menuContent {
+.menuContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,9 +221,11 @@ h1 {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   padding: 20px; }
-  #menuContent p {
+  .menuContent p {
     font-size: 16px;
     font-style: italic; }
+  .menuContent div {
+    padding: 10px; }
 
 #galleryContent {
   display: -webkit-box;
@@ -242,6 +247,36 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.formText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%; }
+  .formText input, .formText textarea {
+    padding: 10px;
+    margin: 10px; }
+
+::-webkit-input-placeholder {
+  color: #85a11f; }
+
+:-ms-input-placeholder {
+  color: #85a11f; }
+
+::placeholder {
+  color: #85a11f; }
 
 body {
   margin: 0 auto;

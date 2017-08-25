@@ -1,0 +1,18 @@
+form {
+	display: flex;
+	justify-content: center;
+}
+
+.formText {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	input, textarea {
+		padding: 10px;
+    	margin: 10px;
+	}
+}
+
+::placeholder {
+	color: rgba(133, 161, 31, 1);
+}
