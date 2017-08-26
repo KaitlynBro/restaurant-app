@@ -248,6 +248,25 @@ h1 {
       -ms-flex-pack: center;
           justify-content: center; }
 
+#pic1, #pic2, #pic3 {
+  display: none; }
+
+#contactH2 {
+  margin-bottom: 30px; }
+
+#socialIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px; }
+  #socialIcons .fa {
+    font-size: 20px;
+    padding-right: 10px;
+    color: rgba(133, 161, 31, 0.6); }
+
 form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -255,6 +274,10 @@ form {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  form input[value=Submit] {
+    background-color: transparent;
+    border: 5px solid rgba(133, 161, 31, 0.6);
+    font-size: 18px; }
 
 .formText {
   display: -webkit-box;
@@ -277,6 +300,58 @@ form {
 
 ::placeholder {
   color: #85a11f; }
+
+footer {
+  background-color: rgba(133, 161, 31, 0.6);
+  margin-top: 150px;
+  padding: 50px; }
+
+#footerContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly; }
+  #footerContent h4 {
+    font-size: 21px; }
+  #footerContent div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+#callUs p:first-child, #findUs p:first-child, #hoursMonFri p:first-child, #hoursSatSun p:first-child {
+  margin-bottom: 0; }
+
+#callUs p:nth-child(2), #findUs p:nth-child(2), #hoursMonFri p:nth-child(2), #hoursSatSun p:nth-child(2) {
+  margin-top: 5px; }
+
+input[type=text] {
+  padding: 5px;
+  margin-top: 6px; }
+
+div#footerSocialIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style-type: none; }
+  div#footerSocialIcons li {
+    padding: 10px;
+    font-size: 20px; }
+  div#footerSocialIcons .fa {
+    color: black; }
 
 body {
   margin: 0 auto;

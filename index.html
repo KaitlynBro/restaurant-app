@@ -14,10 +14,10 @@
 			<li class="mias">Mia's</li>
 		</ul>
 		<ul id="navItems">
-			<li><button>Menu</button></li>
-			<li><button>Gallery</button></li>
-			<li><button>Specials</button></li>
-			<li><button>Contact</button></li>
+			<li><button id="menuButton">Menu</button></li>
+			<li><button id="galleryButton">Gallery</button></li>
+			<li><button id="specialsButton">Specials</button></li>
+			<li><button id="contactButton">Contact</button></li>
 		</ul>
 	</nav>
 	<div id="logoAndButton">
@@ -26,7 +26,7 @@
 	</div>
 </header>
 
-<section id="menuSection" class="colorBackground">
+<section id="menuSection" class="colorBackground menuContainer">
 	<h2>Menu</h2>
 	<div class="menuContent"> 
 		<div>
@@ -53,7 +53,7 @@
 	</div> <!--closing div that holds all menu items-->
 </section>
 
-<section>
+<section id="galleryContainer">
 	<h2>Gallery</h2>
 	<div id="galleryContent"> <!--opening div that holds all gallery items-->
 		<div class="galleryImage"><!--first column of images-->
@@ -72,12 +72,12 @@
 	</div> <!--closing div that holds all gallery items-->
 </section>
 
-<section class="colorBackground">
+<section class="colorBackground" id="specialsContainer">
 	<h2>Weekly Specials</h2>
 	<div class="menuContent">
 		<div>
 			<h4>Monday</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, nemo.......$25.50</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, nemo.......$25.50
 
 			<h4>Tuesday</h4>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, nemo.......$25.50</p>
@@ -100,31 +100,51 @@
 	</div>
 </section>
 
-<section>
-	<h2>Contact</h2>
-	<form action="">
-		<div class="formText"> 
-			<input type="text" placeholder="Name">
-			<input type="text" placeholder="Email">
-			<textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-		</div>
-	</form>
+<section id="specialsGallery">
 	<div>
+		<p>Weekly Specials Gallery</p>
+		<nav>
+			<button id="monday">mon</button>
+			<button id="tuesday">tues</button>
+			<button id="wednesday">Wednesday</button>
+			<button id="thursday">Thursday</button>
+			<button id="saturday">Saturday</button>
+			<button id="sunday">Sunday</button>
+		</nav>
+	</div>
+	<div id="specialsPictures">
+		<img src="assets/beef-rosemary.png" alt="" id="pic1">
+		<img src="assets/bowtie-pasta.png" alt="" id="pic2">
+		<img src="assets/burgers.png" alt="" id="pic3">
+	</div>
+</section>
+
+<section id="contactContainer">
+	<h2 id="contactH2">Contact</h2>
+	<div id="socialIcons">
 		<i class="fa fa-twitter" aria-hidden="true"></i>
 		<i class="fa fa-facebook" aria-hidden="true"></i>
 		<i class="fa fa-linkedin" aria-hidden="true"></i>
 	</div>
+	<form action="">
+		<div class="formText"> 
+			<input type="text" placeholder="Name" required>
+			<input type="email" placeholder="Email" required>
+			<textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+			<input type="submit" value="Submit" id="submitButton" required>
+		</div>
+	</form>
 </section>
 
 <footer>
-	<div> <!--opening div for footer content-->
+	<div id="footerContent"> <!--opening div for footer content-->
 		<div>
 			<h4>Information</h4>
-			<div>
+			<div id="callUs">
 				<p><i class="fa fa-phone" aria-hidden="true"></i> Call Us</p>
 				<p>905-905-5099</p>
 			</div>
-			<div>
+			<div id="findUs">
 				<p><i class="fa fa-map-marker" aria-hidden="true"></i> Find Us</p>
 				<p>1234 Leslie Lane, Toronto, ON</p>
 			</div>
@@ -132,11 +152,11 @@
 
 		<div>
 			<h4>Hours</h4>
-			<div>
+			<div id="hoursMonFri">
 				<p>Mon-Fri</p>
 				<p>12pm-10pm</p>
 			</div>
-			<div>
+			<div id="hoursSatSun">
 				<p>Sat-Sun</p>
 				<p>12pm-1am</p>
 			</div>
@@ -145,6 +165,12 @@
 		<div>
 			<h4>Subscribe</h4>
 			<input type="text" placeholder="Email">
+			<div id="footerSocialIcons">
+				<li><a href="https://twitter.com/kaitlynbrouwers" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="http://bit.ly/2sfyYKV" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+				<li><a href="https://medium.com/@katiebrouwers" target="_blank"><i class="fa fa-medium" aria-hidden="true"></i></a></li>
+				<li><a href="https://github.com/KaitlynBro" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+			</div>
 		</div>
 	</div> <!--closing div for footer content-->
 </footer>
