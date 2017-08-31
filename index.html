@@ -8,7 +8,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Parisienne|Raleway" rel="stylesheet">
 </head>
 <body>
-<header>
+<header id="header">
 	<nav id="mainNav">
 		<ul>
 			<li class="mias">Mia's</li>
@@ -27,7 +27,7 @@
 </header>
 
 <section id="menuSection" class="colorBackground menuContainer">
-	<h2>Menu</h2>
+	<h2 id="menuTitle">Menu</h2>
 	<div class="menuContent"> 
 		<div>
 			<h4>Consectetuer adipiscing elit.......$25.50</h4>
@@ -57,23 +57,23 @@
 	<h2>Gallery</h2>
 	<div id="galleryContent"> <!--opening div that holds all gallery items-->
 		<div class="galleryImage"><!--first column of images-->
-			<img src="assets/beef-rosemary.png" alt="">
-			<img src="assets/bowtie-pasta.png" alt="">
+			<img src="assets/beef-rosemary.png" alt="Rosemary Beef and Mashed Potatoes">
+			<img src="assets/bowtie-pasta.png" alt="Bowtie Pesto Pasta with Cherry Tomatoes and Lettuce in a Pesto Sauce">
 		</div>
 
 		<div class="galleryImage"> <!--first row of images in column 2-->
-			<img src="assets/burger-header.png" alt="">
-			<img src="assets/pasta.png" alt="">
+			<img src="assets/burger-header.png" alt="Crusted Hamburger with Shredded Lettuce and Onions">
+			<img src="assets/pasta.png" alt="Pasta with Thinly Sliced Beef, Shredded Parmesan, and Green Onions">
 		</div>
 		<div class="galleryImage"> <!--second row of images in column 2-->
-			<img src="assets/pizza.png" alt="">
-			<img src="assets/burgers.png" alt="">
+			<img src="assets/pizza.png" alt="Pizza with Pepperoni and Olives with a Mozzerella Base">
+			<img src="assets/burgers.png" alt="Classic Burger with Bacon and Cheddar">
 		</div>
 	</div> <!--closing div that holds all gallery items-->
 </section>
 
 <section class="colorBackground" id="specialsContainer">
-	<h2>Weekly Specials</h2>
+	<h2 id="specialsTitle">Weekly Specials</h2>
 	<div class="menuContent">
 		<div>
 			<h4>Monday</h4>
@@ -101,22 +101,26 @@
 </section>
 
 <section id="specialsGallery">
-	<div>
-		<p>Weekly Specials Gallery</p>
-		<nav>
-			<button id="monday">mon</button>
-			<button id="tuesday">tues</button>
-			<button id="wednesday">Wednesday</button>
-			<button id="thursday">Thursday</button>
-			<button id="saturday">Saturday</button>
-			<button id="sunday">Sunday</button>
+	<div id="weekButtons">
+		<h2>Weekly Specials Gallery</h2>
+		<nav id="galleryDays">
+			<button id="monday" value="Monday">Monday</button>
+			<button id="tuesday" value="Tuesday">Tuesday</button>
+			<button id="wednesday" value="Wednesday">Wednesday</button>
+			<button id="thursday" value="Thursday">Thursday</button>
+			<button id="saturday" value="Saturday">Saturday</button>
+			<button id="sunday" value="Sunday">Sunday</button>
 		</nav>
 	</div>
 	<div id="specialsPictures">
-		<img src="assets/beef-rosemary.png" alt="" id="pic1">
-		<img src="assets/bowtie-pasta.png" alt="" id="pic2">
-		<img src="assets/burgers.png" alt="" id="pic3">
+		<img src="assets/monday.png" alt="Monday Special: $10 for Lightly Fried White Fish with Avocado Mash and Potato Wedges with Creamy Ranch Dip" id="pic1">
+		<img src="assets/salmon.png" alt="Tuesday Special: $15 for Peppered Salmon and Corn" id="pic2">
+		<img src="assets/beer.png" alt="Wednesday Special: $4 for 1 Pint of Hollano Beer" id="pic3">
+		<img src="assets/sushi.png" alt="Thursday Special: $10 for Salmon Sushi, Soy Sauce Drizzle, and Cavier " id="pic4">
+		<img src="assets/zuchini.png" alt="Saturday Special: $8 for any Appetizer (pictured above: Deep Fried Plaintain Bananas wrapped in Zuchini)" id="pic5">
+		<img src="assets/cheesecake.png" alt="Sunday Special: $5 for Any Dessert (pictured above: Frozen Fruit Cheesecake)" id="pic6">
 	</div>
+	<p id="specialsText"></p>
 </section>
 
 <section id="contactContainer">
