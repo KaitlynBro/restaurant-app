@@ -1,3 +1,42 @@
+const monday = document.getElementById('monday');
+const tuesday = document.getElementById('tuesday');
+const wednesday = document.getElementById('wednesday');
+const thursday = document.getElementById('thursday');
+const saturday = document.getElementById('saturday');
+const sunday = document.getElementById('sunday');
+const specialsSection = document.getElementById('specialsPictures');
+const galleryButtons = document.getElementsByClassName('galleryButton');
+const galleryImages = document.getElementsByClassName('specialsImage');
+
+
+//first method tried - cannot read property style of null
+monday.addEventListener('click', function() {
+    function OnClick() {
+        specialsSection.innerHTML = '';
+    }
+    function showContent() {
+        document.getElementById('pic1').style.display = 'block';
+    }
+})
+
+//second method tried
+//loop over buttons on click, check what button was pressed, find the matching information (ie. if monday was pressed, find monday image), empty container if any current info is there, append new info
+for (var i = 0 ; i < galleryButtons.length; i++) {
+   galleryButtons[i].addEventListener('click', function() {
+        console.log(galleryImages)
+   }); 
+}
+ 
+
+ 
+
+//third method, switched the event listener and the for loop around - said add event listener not a function
+galleryButtons.addEventListener('click', function() {
+    for (var i = 0; i < galleryButtons.length; i++) {
+        console.log(this.value)
+    }
+})
+
 //smooth scroll for menu section
 $('#menuButton').on('click', function() {
     $('html,body').animate({
@@ -38,74 +77,6 @@ $('#submitButton').on('submit', function(e) {
     e.preventDefault();
 })
 
-const monday = document.getElementById('monday');
-const tuesday = document.getElementById('tuesday');
-const wednesday = document.getElementById('wednesday');
-const thursday = document.getElementById('thursday');
-const saturday = document.getElementById('saturday');
-const sunday = document.getElementById('sunday');
-const mondayImage = document.getElementById('pic1');
-
-$(monday).on('click', function() {
-    document.getElementById('pic6').style.display = 'none';
-    document.getElementById('pic5').style.display = 'none';
-    document.getElementById('pic4').style.display = 'none';
-    document.getElementById('pic3').style.display = 'none';
-    document.getElementById('pic2').style.display = 'none';
-    document.getElementById('pic1').style.display = 'block';
-    $('#specialsText').empty();
-    document.getElementById('specialsText').append('$10 for Lightly Fried White Fish with Avocado Mash and Potato Wedges with Creamy Ranch Dip');
-})
-$(tuesday).on('click', function() {
-    document.getElementById('pic1').style.display = 'none';
-    document.getElementById('pic3').style.display = 'none';
-    document.getElementById('pic4').style.display = 'none';
-    document.getElementById('pic5').style.display = 'none';
-    document.getElementById('pic6').style.display = 'none';
-    document.getElementById('pic2').style.display = 'block';
-    $('#specialsText').empty();
-    document.getElementById('specialsText').append('$15 for Peppered Salmon and Corn');
-})
-$(wednesday).on('click', function() {
-    document.getElementById('pic1').style.display = 'none';
-    document.getElementById('pic2').style.display = 'none';
-    document.getElementById('pic4').style.display = 'none';
-    document.getElementById('pic5').style.display = 'none';
-    document.getElementById('pic6').style.display = 'none';
-    document.getElementById('pic3').style.display = 'block';
-    $('#specialsText').empty();
-    document.getElementById('specialsText').append('$4 for 1 Pint of Hollano Beer');
-})
-$(thursday).on('click', function() {
-    document.getElementById('pic1').style.display = 'none';
-    document.getElementById('pic2').style.display = 'none';
-    document.getElementById('pic3').style.display = 'none';
-    document.getElementById('pic5').style.display = 'none';
-    document.getElementById('pic6').style.display = 'none';
-    document.getElementById('pic4').style.display = 'block';
-    $('#specialsText').empty();
-    document.getElementById('specialsText').append('$10 for Salmon Sushi, Soy Sauce Drizzle, and Cavier ');
-})
-$(saturday).on('click', function() {
-    document.getElementById('pic1').style.display = 'none';
-    document.getElementById('pic2').style.display = 'none';
-    document.getElementById('pic3').style.display = 'none';
-    document.getElementById('pic4').style.display = 'none';
-    document.getElementById('pic6').style.display = 'none';
-    document.getElementById('pic5').style.display = 'block';
-    $('#specialsText').empty();
-    document.getElementById('specialsText').append('$8 for any Appetizer (pictured above: Deep Fried Plaintain Bananas wrapped in Zuchini');
-})
-$(sunday).on('click', function() {
-    document.getElementById('pic1').style.display = 'none';
-    document.getElementById('pic2').style.display = 'none';
-    document.getElementById('pic3').style.display = 'none';
-    document.getElementById('pic4').style.display = 'none';
-    document.getElementById('pic5').style.display = 'none';
-    document.getElementById('pic6').style.display = 'block';
-    $('#specialsText').empty();
-    document.getElementById('specialsText').append('$5 for Any Dessert (pictured above: Frozen Fruit Cheesecake)');
-});
 
 /*need to do
 1. find DRY way to apply smooth scroll on multiple buttons
