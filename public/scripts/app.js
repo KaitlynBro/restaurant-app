@@ -1,5 +1,6 @@
 "use strict";
 
+//storing specials gallery images into object
 var tastyImages = {
     Monday: "../../assets/monday.png",
     Tuesday: "assets/salmon.png",
@@ -9,34 +10,25 @@ var tastyImages = {
     Sunday: "assets/cheesecake.png"
 };
 
+//storing above objects values into variables
 var mondayImage = tastyImages.Monday;
 var tuesdayImage = tastyImages.Tuesday;
 var wednesdayImage = tastyImages.Wednesday;
 var thursdayImage = tastyImages.Thursday;
 var saturdayImage = tastyImages.Saturday;
 var sundayImage = tastyImages.Sunday;
-
 var galleryButtons = document.getElementsByClassName('galleryButton');
 
-//creating function to be passed down and executed into for loop 
-function clickedOn() {
+//creating function to be passed down and executed into for loop on click event
+function galleryButtonClickedOn() {
     var chosenDay = this.value;
-    console.log('clickedon function works' + this);
-    $('todaysSpecial').attr('src', tastyImages[chosenDay]);
     document.getElementById('specialsPictures').innerHTML = "<img src='" + tastyImages[chosenDay] + "'/>";
 };
 
-//looping over gallery buttons, passing down clickedOn function
+//looping over gallery buttons, passing down clickedOn function to be executed on click event
 for (var i = 0; i < galleryButtons.length; i++) {
-    galleryButtons[i].addEventListener('click', clickedOn);
+    galleryButtons[i].addEventListener('click', galleryButtonClickedOn);
 }
-
-// $('.galleryButton').on('click', function(e){
-//     e.preventDefault();
-//     let chosenDay = $(this).val();
-//     $('.todaysSpecial').attr('src', tastyImages[chosenDay]);
-//     $('#specialsPictures').empty().append(`<img src='${tastyImages[chosenDay]}'/>`);
-// });
 
 //smooth scroll for menu section
 $('#menuButton').on('click', function () {
@@ -56,7 +48,7 @@ $('#galleryButton').on('click', function () {
         scrollTop: $('#galleryContainer').offset().top }, 'slow');
 });
 
-//smooth scroll for specials section
+// smooth scroll for specials section
 $('#specialsButton').on('click', function () {
     $('html,body').animate({
         scrollTop: $('#specialsContainer').offset().top }, 'slow');
