@@ -16,12 +16,27 @@ var thursdayImage = tastyImages.Thursday;
 var saturdayImage = tastyImages.Saturday;
 var sundayImage = tastyImages.Sunday;
 
-$('.galleryButton').on('click', function (e) {
-    e.preventDefault();
-    var chosenDay = $(this).val();
-    $('.todaysSpecial').attr('src', tastyImages[chosenDay]);
-    $('#specialsPictures').empty().append("<img src='" + tastyImages[chosenDay] + "'/>");
-});
+var galleryButtons = document.getElementsByClassName('galleryButton');
+
+//creating function to be passed down and executed into for loop 
+function clickedOn() {
+    var chosenDay = this.value;
+    console.log('clickedon function works' + this);
+    $('todaysSpecial').attr('src', tastyImages[chosenDay]);
+    document.getElementById('specialsPictures').innerHTML = "<img src='" + tastyImages[chosenDay] + "'/>";
+};
+
+//looping over gallery buttons, passing down clickedOn function
+for (var i = 0; i < galleryButtons.length; i++) {
+    galleryButtons[i].addEventListener('click', clickedOn);
+}
+
+// $('.galleryButton').on('click', function(e){
+//     e.preventDefault();
+//     let chosenDay = $(this).val();
+//     $('.todaysSpecial').attr('src', tastyImages[chosenDay]);
+//     $('#specialsPictures').empty().append(`<img src='${tastyImages[chosenDay]}'/>`);
+// });
 
 //smooth scroll for menu section
 $('#menuButton').on('click', function () {
