@@ -64,8 +64,3 @@ $('#contactButton').on('click', function () {
 $('#submitButton').on('submit', function (e) {
     e.preventDefault();
 });
-
-// /*need to do
-// 1. find DRY way to apply smooth scroll on multiple buttons
-// 4. i want to remove all jquery and use only vanilla js
-// */

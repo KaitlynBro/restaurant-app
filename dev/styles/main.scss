@@ -5,15 +5,16 @@
 @import 'partials/specials';
 @import 'partials/contact';
 @import 'partials/footer';
-
-// font-family: 'Raleway', sans-serif;
-// font-family: 'Parisienne', cursive;
+ 
 
 body {
 	margin: 0 auto;
 	max-width: 100%;
 	font-family: 'Raleway', sans-serif;
+}
 
+img {
+    max-width: 100%;
 }
 
 h2 {
@@ -41,8 +42,50 @@ h4 {
     margin-bottom: 0px;
     font-style: italic;
 }
+ 
 
-// img {
-// 	width: 500px;
-// 	height: 500px;
-// }
+@media (max-width: 768px) {
+    h1 {
+        background-color: transparent;
+    }
+    .menuContent {
+        flex-direction: column;
+        text-align: center;
+    }
+    #galleryDays {
+        flex-direction: column;
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    #mainNav {
+        flex-direction: column;
+    }
+    #navItems {
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+    #logoAndButton {
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    #seeMoreButton {
+        width: 100%;
+    }
+    .formText {
+        width: 100%;
+    }
+    #footerContent {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+

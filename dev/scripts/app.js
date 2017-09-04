@@ -28,10 +28,6 @@ for (var i = 0; i < galleryButtons.length; i++) {
   galleryButtons[i].addEventListener('click', galleryButtonClickedOn);
 }
  
-
-
-
-
 //smooth scroll for menu section
 $('#menuButton').on('click', function() {
     $('html,body').animate({
@@ -71,10 +67,3 @@ $('#contactButton').on('click', function() {
 $('#submitButton').on('submit', function(e) {
     e.preventDefault();
 });
-
-
-// /*need to do
-// 1. find DRY way to apply smooth scroll on multiple buttons
-// 4. i want to remove all jquery and use only vanilla js
-// */
-
