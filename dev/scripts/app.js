@@ -63,7 +63,7 @@ $('#contactButton').on('click', function() {
         'slow');
 });
 
-// //preventing page refresh on submit
+//preventing page refresh on submit
 $('#submitButton').on('submit', function(e) {
     e.preventDefault();
 });
