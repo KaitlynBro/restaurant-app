@@ -2,7 +2,7 @@
 
 //storing specials gallery images into object
 var tastyImages = {
-    Monday: "../../assets/monday.png",
+    Monday: "assets/monday.png",
     Tuesday: "assets/salmon.png",
     Wednesday: "assets/beer.png",
     Thursday: "assets/sushi.png",
@@ -60,7 +60,7 @@ $('#contactButton').on('click', function () {
         scrollTop: $('#contactContainer').offset().top }, 'slow');
 });
 
-// //preventing page refresh on submit
+//preventing page refresh on submit
 $('#submitButton').on('submit', function (e) {
     e.preventDefault();
 });

@@ -1,6 +1,6 @@
 //storing specials gallery images into object
 const tastyImages = {
-    Monday: "../../assets/monday.png",
+    Monday: "assets/monday.png",
     Tuesday: "assets/salmon.png",
     Wednesday: "assets/beer.png",
     Thursday: "assets/sushi.png",
